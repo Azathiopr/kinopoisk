@@ -12,6 +12,23 @@ code {
     monospace;
 }
 
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width:1440px) {
+  .container {
+    max-width: 1296px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .container {
+    max-width: 95%;
+  }
+}
+
 .spinall {
   display: flex;
   justify-content: center;

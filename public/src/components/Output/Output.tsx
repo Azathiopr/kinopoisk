@@ -10,13 +10,12 @@ const Output: FC = () => {
     }
 
     return (
-        <div className='output container'>
+        <div className='output'>
             {
                 error ?
                     <span> {error} </span> :
-                    kino.length > 0 ?
-                        kino.map(el => <KinoCard key={el.kinopoiskId || el.filmId} {...el} />)
-                        : <h2>Фильмы не неайдены</h2>
+                    kino.length > 0 &&
+                    kino.map(el => <KinoCard key={el.kinopoiskId || el.filmId} {...el} />)
             }
         </div>
     );
